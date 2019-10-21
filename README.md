@@ -4,6 +4,8 @@
 
 ## git pages 배포 준비
 
+[참고]: https://www.munon.io/react-js-github-pages-deploy/
+
 
 
 ### 준비할 것
@@ -27,23 +29,23 @@ repository 생성 후 clone 주소 복사
 
 2.1 폴더 생성
 
-​	mkdir [folder name]
+​	$ mkdir [folder name]
 
-​	cd [folder name]
+​	$ cd [folder name]
 
 
 
 2.2 git 초기화 후 repository 연결
 
-​	git init
+​	$ git init
 
-​	git remote add [1번에서 복사한 주소]
+​	$ git remote add [1번에서 복사한 주소]
 
 
 
 2.3 git repository 연결 확인
 
-​	git remote -v
+​	$ git remote -v
 
 -> 결과로 복사한 주소가 나와야함.
 
@@ -53,7 +55,7 @@ repository 생성 후 clone 주소 복사
 
 3.1 리액트 cli 설치
 
-​	npm install -g create-react-app
+​	$ npm install -g create-react-app
 
 -> 1회성으로 이용하려면 생성한 폴더 안에서 npm install create-react-app
 
@@ -61,7 +63,7 @@ repository 생성 후 clone 주소 복사
 
 3.2 리액트 프로젝트 생성
 
-​	create-react-app [project name]
+​	$ create-react-app [project name]
 
 -> 결과로 project name을 가진 폴더가 생성되고, 폴더안에 다양한 파일이 생김.
 이미 만들어 놓은 폴더에 바로 프로젝트를 생성하려면 폴더가 비어있어야 함. 
@@ -73,9 +75,9 @@ repository 생성 후 clone 주소 복사
 
 4.1 로컬에서 실행해보기
 
-​	cd [project name]
+​	$ cd [project name]
 
-​	npm start
+​	$ npm start
 
 -> localhost:3000 으로 브라우저가 뜨고, 리액트 로고가 나옴.
 
@@ -83,11 +85,11 @@ repository 생성 후 clone 주소 복사
 
 4.2 git push
 
-​	git add .
+​	$ git add .
 
-​	git commit -m "initial commit"
+​	$ git commit -m "initial commit"
 
-​	git push -u origin master
+​	$ git push -u origin master
 
 
 
@@ -95,9 +97,9 @@ repository 생성 후 clone 주소 복사
 
 5.1 빌드도구 설치
 
-​	project folder안에서
+​	$ project folder안에서
 
-​	npm install --save gh-pages
+​	$ npm install --save gh-pages
 
 
 
@@ -125,12 +127,13 @@ repository 생성 후 clone 주소 복사
 ```
 
 -> 추가 1,2,3 입력  후 저장
+predeploy 는 업로드 전, bulid 오류 체크용.
 
 
 
 5.3 git page 배포
 
-​	npm deploy
+​	$ npm run deploy
 
 -> deploy 하면 git hub에 gh-pages라는 branch 생성되고, 빌드된 리액트 프로젝트가 push됨.
 
